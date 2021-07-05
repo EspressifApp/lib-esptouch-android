@@ -1,5 +1,4 @@
 # EspTouch
-[example](../app/src/main/java/com/espressif/esptouch/android/v1)
 
 - Create task instance
   ```java
