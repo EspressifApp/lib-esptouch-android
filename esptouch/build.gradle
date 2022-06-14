@@ -6,21 +6,23 @@ plugins {
 def libVersion = "1.1.0"
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 32
 
+    namespace "com.espressif.iot.esptouch"
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 30
+        targetSdkVersion 32
+
+        buildConfigField "String", "VERSION_NAME", "\"$libVersion\""
     }
 
     buildTypes {
         debug {
-            buildConfigField "String", "VERSION_NAME", "\"$libVersion\""
+
         }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "VERSION_NAME", "\"$libVersion\""
         }
     }
 
@@ -34,11 +36,11 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                from components.release
-
                 groupId = 'com.github.EspressifApp'
                 artifactId = 'lib-esptouch-android'
                 version = "$libVersion"
+
+                from components.release
             }
         }
     }
