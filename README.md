@@ -16,7 +16,7 @@ This respsitory is just used to publish lib to JitPack.
    ```
 - And add a dependency code to your app module's `build.gradle` file.
   ```
-  implementation 'com.github.EspressifApp:lib-esptouch-android:1.0.0'
+  implementation 'com.github.EspressifApp:lib-esptouch-android:1.1.1'
   ```
 
 ## ESPRSSIF MIT License
